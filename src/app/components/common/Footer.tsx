@@ -11,31 +11,68 @@ import {
 import { GiMagicLamp } from 'react-icons/gi';
 
 const Footer: React.FC = () => {
+  // Dynamic data for the Footer
+  const footerContent = {
+    brand: {
+      name: 'Maroko Ekspert',
+      description: 'Authentic Moroccan experiences with Polish-speaking guides. Creating unforgettable journeys since 2015.',
+      socialLinks: [
+        { href: '#', icon: <FaFacebook className="text-xl" /> },
+        { href: '#', icon: <FaInstagram className="text-xl" /> },
+        { href: '#', icon: <FaTripadvisor className="text-xl" /> },
+      ],
+    },
+    quickLinks: [
+      { href: '#', label: 'Home' },
+      { href: '#', label: 'About Us' },
+      { href: '#', label: 'Our Tours' },
+      { href: '#', label: 'Gallery' },
+      { href: '#', label: 'Meet Our Guides' },
+      { href: '#', label: 'Contact' },
+    ],
+    contactInfo: {
+      phone: {
+        number: '+212 123 456 789',
+        details: '(Polish/English/Arabic)',
+      },
+      email: 'contact@marokoekspert.com',
+      address: 'Rue de la Kasbah, Marrakech 40000, Morocco',
+    },
+    newsletter: {
+      description: 'Subscribe for exclusive Morocco travel tips and special offers.',
+      buttonText: 'Subscribe',
+      globeText: 'Available in: Polski | English | Français',
+    },
+    bottomLinks: [
+      { href: '#', label: 'Privacy Policy' },
+      { href: '#', label: 'Terms of Service' },
+      { href: '#', label: 'Booking Conditions' },
+      { href: '#', label: 'FAQ' },
+    ],
+  };
+
   return (
     <footer className="relative bg-amber-900 text-amber-50 overflow-hidden">
       
       {/* Main footer content */}
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          
           {/* Brand column */}
           <div className="flex flex-col items-start">
             <div className="flex items-center mb-4">
               <GiMagicLamp className="text-3xl text-amber-300 mr-2" />
-              <span className="text-2xl font-bold">Maroko Ekspert</span>
+              <span className="text-2xl font-bold">{footerContent.brand.name}</span>
             </div>
             <p className="mb-4 text-amber-200">
-              Authentic Moroccan experiences with Polish-speaking guides. Creating unforgettable journeys since 2015.
+              {footerContent.brand.description}
             </p>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="text-amber-300 hover:text-white transition-colors">
-                <FaFacebook className="text-xl" />
-              </a>
-              <a href="#" className="text-amber-300 hover:text-white transition-colors">
-                <FaInstagram className="text-xl" />
-              </a>
-              <a href="#" className="text-amber-300 hover:text-white transition-colors">
-                <FaTripadvisor className="text-xl" />
-              </a>
+              {footerContent.brand.socialLinks.map((link, index) => (
+                <a key={index} href={link.href} className="text-amber-300 hover:text-white transition-colors">
+                  {link.icon}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -45,12 +82,11 @@ const Footer: React.FC = () => {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-amber-200 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="text-amber-200 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-amber-200 hover:text-white transition-colors">Our Tours</a></li>
-              <li><a href="#" className="text-amber-200 hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="#" className="text-amber-200 hover:text-white transition-colors">Meet Our Guides</a></li>
-              <li><a href="#" className="text-amber-200 hover:text-white transition-colors">Contact</a></li>
+              {footerContent.quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} className="text-amber-200 hover:text-white transition-colors">{link.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -63,20 +99,20 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <FaPhone className="mt-1 mr-3 text-amber-300 flex-shrink-0" />
                 <div>
-                  <span className="block text-amber-200">+212 123 456 789</span>
-                  <span className="block text-sm text-amber-400">(Polish/English/Arabic)</span>
+                  <span className="block text-amber-200">{footerContent.contactInfo.phone.number}</span>
+                  <span className="block text-sm text-amber-400">{footerContent.contactInfo.phone.details}</span>
                 </div>
               </li>
               <li className="flex items-start">
                 <FaEnvelope className="mt-1 mr-3 text-amber-300 flex-shrink-0" />
-                <a href="mailto:contact@marokoekspert.com" className="text-amber-200 hover:text-white transition-colors">
-                  contact@marokoekspert.com
+                <a href={`mailto:${footerContent.contactInfo.email}`} className="text-amber-200 hover:text-white transition-colors">
+                  {footerContent.contactInfo.email}
                 </a>
               </li>
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 mr-3 text-amber-300 flex-shrink-0" />
                 <address className="not-italic text-amber-200">
-                  Rue de la Kasbah, Marrakech 40000, Morocco
+                  {footerContent.contactInfo.address}
                 </address>
               </li>
             </ul>
@@ -88,7 +124,7 @@ const Footer: React.FC = () => {
               Travel Tips & Offers
             </h3>
             <p className="mb-4 text-amber-200">
-              Subscribe for exclusive Morocco travel tips and special offers.
+              {footerContent.newsletter.description}
             </p>
             <form className="space-y-3">
               <input 
@@ -101,12 +137,12 @@ const Footer: React.FC = () => {
                 className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded font-medium w-full transition-colors flex items-center justify-center gap-2"
               >
                 <FaEnvelope />
-                <span>Subscribe</span>
+                <span>{footerContent.newsletter.buttonText}</span>
               </button>
             </form>
             <div className="mt-4 flex items-center text-sm text-amber-400">
               <FaGlobe className="mr-2" />
-              <span>Available in: Polski | English | Français</span>
+              <span>{footerContent.newsletter.globeText}</span>
             </div>
           </div>
         </div>
@@ -117,10 +153,9 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} Maroko Ekspert. All rights reserved.
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <a href="#" className="text-amber-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-amber-400 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="text-amber-400 hover:text-white transition-colors">Booking Conditions</a>
-            <a href="#" className="text-amber-400 hover:text-white transition-colors">FAQ</a>
+            {footerContent.bottomLinks.map((link, index) => (
+              <a key={index} href={link.href} className="text-amber-400 hover:text-white transition-colors">{link.label}</a>
+            ))}
           </div>
         </div>
       </div>

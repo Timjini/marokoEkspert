@@ -1,5 +1,4 @@
-// context/LanguageContext.tsx
-'use client';  // Ensures this context is only used on the client side
+'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
