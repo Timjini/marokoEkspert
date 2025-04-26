@@ -1,8 +1,8 @@
-import { useState } from "react";
+'use client';
+import { useEffect, useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
-export const ContactPage = () => {
-  // All contact content organized here
+const ContactPage = () => {
   const contactContent = {
     pageTitle: "Get in Touch",
     pageDescription: "We'd love to hear from you! Reach out for bookings, questions, or travel advice.",
@@ -66,6 +66,8 @@ export const ContactPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isClient, setIsClient] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -74,9 +76,12 @@ export const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
     setIsSubmitted(true);
   };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -171,3 +176,5 @@ export const ContactPage = () => {
     </div>
   );
 };
+
+export default ContactPage;
