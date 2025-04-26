@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Page {
+  id              Int           @id @default(autoincrement())
+  slug            String        @unique
+  title_en        String
+  title_pl        String
+  description_en  String?
+  description_pl  String?
+  content_en      String
+  content_pl      String?
+  metaDescription String?
+  metaKeywords    String?
+  metaTitle       String?
+  metaImage       String?
+  metaImageAlt    String?
+  rawContent_en   String?
+  rawContent_pl   String?
+  status          PageStatus    @default(draft)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  pageElements    PageElement[]
+
+  @@map("pages")
+}
+
+model PageElement {
+  id             Int      @id @default(autoincrement())
+  title_en       String
+  title_pl       String
+  description_en String?
+  description_pl String?
+  image          String?
+  imageAlt       String?
+  pageId         Int
+  type           String
+  content        String
+  order          Int      @default(0)
+  rawContent_en  String?
+  rawContent_pl  String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  page Page @relation(fields: [pageId], references: [id])
+
+  @@map("page_elements")
+}
+
+enum PageStatus {
+  draft
+  published
+  archived
+}

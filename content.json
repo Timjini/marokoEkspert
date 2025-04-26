@@ -1,0 +1,35 @@
+{
+    "backgroundImage": "/morocco-hero.jpg",
+    "decorativeIcons": [
+      {
+        "icon": "GiSpotedFlower",
+        "className": "text-amber-300 text-3xl"
+      },
+      {
+        "icon": "GiDesert",
+        "className": "text-amber-400 text-4xl"
+      },
+      {
+        "icon": "GiMountainRoad",
+        "className": "text-amber-300 text-3xl"
+      }
+    ],
+    "headings": {
+      "main": "Odkryj autentyczne wycieczki po Maroku",
+      "sub": "Maroko Ekspert oferuje profesjonalne wycieczki, wyprawy i autentyczne atrakcje w Maroku."
+    },
+    "polishBadge": {
+      "text": "Teraz po polsku!",
+      "iconPath": "M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+    },
+    "ctaButton": {
+      "text": "Odkryj wycieczki",
+      "icon": "FaMapMarkedAlt",
+      "href": "#tours"
+    },
+    "scrollIndicator": {
+      "icon": "FaChevronDown",
+      "className": "text-amber-300 text-2xl"
+    }
+  }
+  

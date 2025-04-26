@@ -34,6 +34,8 @@ model Page {
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
   pageElements     PageElement[]
+
+  @@map("pages")
 }
 
 model PageElement {
@@ -54,6 +56,7 @@ model PageElement {
   updatedAt DateTime @updatedAt
 
   page      Page     @relation(fields: [pageId], references: [id])
+  @@map("page_elements")
 }
 
 enum PageStatus {
