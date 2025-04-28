@@ -20,7 +20,7 @@ export async function POST(req: Request) {
       page,
     });
   } catch (error) {
-    console.error("Error fetching page content:", error);
+    console.error(error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
