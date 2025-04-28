@@ -26,7 +26,7 @@ const eslintConfig = [
   },
 
   {
-    ignores: ["src/generated/**"],
+    ignores: ["src/app/generated/**"],
   },
 ];
 

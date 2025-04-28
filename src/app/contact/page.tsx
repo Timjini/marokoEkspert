@@ -63,10 +63,10 @@ const ContactPage = () => {
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   const [isClient, setIsClient] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
