@@ -46,19 +46,19 @@ export const MeetOurGuides: React.FC = () => {
     },
     guides: [
       {
-        name: "Karim Belhaj",
+        name: "Name Here",
         expertise: "Sahara Desert Specialist",
         languages: ["Polish", "English", "Arabic", "French"],
         imgSrc: "/guides/karim.jpg"
       },
       {
-        name: "Amina Toufiq",
+        name: "Name Here",
         expertise: "Marrakech Cultural Guide",
         languages: ["Polish", "English", "Arabic"],
         imgSrc: "/guides/amina.jpg"
       },
       {
-        name: "Youssef El-Masri",
+        name: "Name Here",
         expertise: "Atlas Mountain Trekker",
         languages: ["Polish", "English", "Berber"],
         imgSrc: "/guides/youssef.jpg"
