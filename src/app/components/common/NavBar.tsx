@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center justify-between py-4">
           <div className="flex items-center space-x-2">
-            <GiMagicLamp className="text-2xl text-amber-300" />
+            {/* <GiMagicLamp className="text-2xl text-amber-300" /> */}
             <span className="text-xl font-bold">Maroko Ekspert</span>
           </div>
 

@@ -12,42 +12,42 @@ export const Gallery: React.FC = () => {
     },
     galleryItems: [
       {
-        imgSrc: "/gallery/desert-sunset.jpg",
+        imgSrc: "https://plus.unsplash.com/premium_photo-1705004597770-40e4db5df8a6?q=80&w=3590&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Sahara Desert at sunset",
         category: "Desert"
       },
       {
-        imgSrc: "/gallery/spice-market.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Colorful spice market in Marrakech",
         category: "Markets"
       },
       {
-        imgSrc: "/gallery/camel-trek.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1559586616-361e18714958?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Camel trek in the dunes",
         category: "Adventure"
       },
       {
-        imgSrc: "/gallery/riad-courtyard.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1519594445471-0e5f86b3fb09?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Traditional riad courtyard",
         category: "Accommodation"
       },
       {
-        imgSrc: "/gallery/berber-village.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1517315403381-a12569a9da85?q=80&w=3280&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Atlas Mountains Berber village",
         category: "Culture"
       },
       {
-        imgSrc: "/gallery/essaouira-beach.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1559925523-10de9e23cf90?q=80&w=3152&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Essaouira beach and boats",
         category: "Coastal"
       },
       {
-        imgSrc: "/gallery/moroccan-cuisine.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1508589066756-c5dfb2cb7587?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Traditional Moroccan tagine",
         category: "Food"
       },
       {
-        imgSrc: "/gallery/fes-alley.jpg",
+        imgSrc: "https://images.unsplash.com/photo-1534273006427-1686266049b7?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Historic alley in Fes",
         category: "Cities"
       }

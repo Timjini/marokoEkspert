@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
       {
         title: "Who We Are",
         text: "Maroko Ekspert specializes in crafting unforgettable Moroccan journeys. Since 2015, we’ve been connecting travelers with the soul of Morocco through carefully curated tours and authentic local experiences.",
-        image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+        image: "/images/maroko-ekspert.png"
       },
       {
         title: "Our Mission",
@@ -78,10 +78,10 @@ const AboutPage: React.FC = () => {
     ],
     teamMembers: [
       {
-        name: "Karim Belhaj",
+        name: "El Ouafi",
         role: "Founder & Lead Guide",
-        bio: "Born in the Atlas Mountains, Karim has been sharing Morocco's secrets for over 15 years.",
-        image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+        bio: "seasoned professional with over 15 years of experience in travel and tourism between Morocco and Poland.",
+        image: "/images/maroko-ekspert.png"
       },
       {
         name: "Amina Toufiq",
@@ -132,7 +132,7 @@ const AboutPage: React.FC = () => {
                 width={800}
                 height={600}
                 alt="Maroko Ekspert team" 
-                className="rounded-xl shadow-lg w-full h-auto"
+                className="rounded-xl shadow-lg w-96 h-auto"
               />
             </div>
             <div className="md:w-1/2">
@@ -170,7 +170,7 @@ const AboutPage: React.FC = () => {
                     height={600}
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-96 object-cover object-top"
                   />
                 </div>
                 <div className="p-6">
