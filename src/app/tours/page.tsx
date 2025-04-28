@@ -22,7 +22,7 @@ const Tours: React.FC = () => {
       category: "Activity",
       location: "Marrakech",
       duration: "2 hours",
-      price: 30,
+      price: 75,
       description: "Experience a magical sunset over the palm groves with traditional Berber tea.",
       language: ["Polish", "English"],
       type: "Group",
@@ -31,64 +31,64 @@ const Tours: React.FC = () => {
     },
     {
       id: 2,
-      title: "Atlas Mountains Day Trip",
+      title: "Discover Marrakech: Full-Day Guided City Tour",
       category: "Tour",
       location: "Marrakech",
       duration: "Full day",
-      price: 65,
-      description: "Hike through Berber villages with stunning mountain views and lunch with locals.",
+      price: 80,
+      description: "Explore Marrakech's vibrant souks, palaces, gardens, and historic medina in one day!",
       language: ["Polish", "English", "French"],
       type: "Private",
-      thumbnail: "/atlas-mountains.jpg"
+      thumbnail: "https://images.unsplash.com/photo-1618423205267-e95744f57edf?q=80&w=3008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 3,
-      title: "Essaouira Coastal Escape",
-      category: "Tour",
-      location: "Essaouira",
-      duration: "Full day",
+      title: "Flavors of Marrakech: A Guided Culinary Journey",
+      category: "Activity",
+      location: "Marrakech",
+      duration: "2 hours",
       price: 75,
-      description: "Explore the charming port city with its vibrant markets and fresh seafood.",
-      language: ["English", "French"],
+      description: "Taste Marrakech’s authentic flavors on a guided tour through markets and kitchens!",
+      language: ["Polish", "French"],
       type: "Group",
-      thumbnail: "/essaouira.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1643019237176-8ae0859f1123?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       bestseller: true
     },
     {
       id: 4,
-      title: "Traditional Moroccan Cooking Class",
-      category: "Activity",
+      title: "4x4 Off-Road through the High Atlas",
+      category: "Tour",
       location: "Marrakech",
       duration: "3 hours",
-      price: 45,
-      description: "Learn to cook authentic tagine and pastilla with local chefs.",
+      price: 75,
+      description: "Experience rugged trails and breathtaking High Atlas views on a thrilling 4x4 ride!",
       language: ["Polish", "English"],
       type: "Group",
-      thumbnail: "/cooking-class.jpg"
+      thumbnail: "https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 5,
-      title: "Agadir Beach & Surf Experience",
+      title: "Ait Ben Haddou & Ouarzazate: Full-Day Desert Adventure",
       category: "Activity",
-      location: "Agadir",
-      duration: "Half-day",
+      location: "Marrakech",
+      duration: "Full day",
       price: 55,
-      description: "Surf lessons or relaxation on Morocco's best beaches with equipment included.",
-      language: ["English", "French"],
-      type: "Private",
-      thumbnail: "/agadir-beach.jpg"
+      description: "Journey through ancient kasbahs and desert landscapes on a full-day guided trip!",
+      language: ["English", "Polish"],
+      type: "Group",
+      thumbnail: "https://images.unsplash.com/photo-1548105155-b8c1b5142252?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 6,
-      title: "3-Day Sahara Desert Adventure",
-      category: "Tour",
-      location: "Merzouga",
-      duration: "3 days",
-      price: 250,
-      description: "Camel trekking, luxury desert camp, and breathtaking dunes under the stars.",
+      title: "Paradise Valley & Immouzzer: Nature Escape Day Trip",
+      category: "Activity",
+      location: "Agadir",
+      duration: "Full day",
+      price: 45,
+      description: "Swim in natural pools and hike through lush valleys on this refreshing day tour!",
       language: ["Polish", "English"],
       type: "Private",
-      thumbnail: "/desert-tour.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1577968680674-d967769be12c?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       bestseller: true
     }
   ];
@@ -159,7 +159,7 @@ const Tours: React.FC = () => {
         [filterType]: currentFilters
       };
     });
-    setCurrentPage(1); // Reset to first page when filters change
+    setCurrentPage(1);
   };
 
   // Clear all filters
@@ -399,7 +399,7 @@ const Tours: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                        <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center transition-colors">
+                        <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center transition-colors cursor-pointer">
                           View Details <FaChevronRight className="ml-1" />
                         </button>
                       </div>

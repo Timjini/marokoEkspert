@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           {/* Brand column */}
           <div className="flex flex-col items-start">
             <div className="flex items-center mb-4">
-              <GiMagicLamp className="text-3xl text-amber-300 mr-2" />
+              {/* <GiMagicLamp className="text-3xl text-amber-300 mr-2" /> */}
               <span className="text-2xl font-bold">{footerContent.brand.name}</span>
             </div>
             <p className="mb-4 text-amber-200">
