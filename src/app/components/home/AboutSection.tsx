@@ -1,6 +1,18 @@
 import React from 'react';
 
 const AboutSection: React.FC = () => {
+
+  const content = {
+    title: "Experience the Magic of Morocco",
+    description: "At Maroko Ekspert, we specialize in authentic Moroccan adventures...",
+    companyName: "Maroko Ekspert",
+    highlightText: "Now available in your native language!",
+    images: {
+      decorative: "/images/moroccan-pattern.png",
+      icon: "/images/language-icon.svg"
+    }
+  };
+
   return (
     <section className="relative py-16 md:py-24 bg-gradient-to-b from-amber-50 to-amber-100 overflow-hidden">
       {/* Decorative elements */}
@@ -18,15 +30,15 @@ const AboutSection: React.FC = () => {
           {/* Section title */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-6">
             <span className="inline-block relative">
-              Experience the Magic of Morocco
+              {content.title}
               <span className="absolute bottom-0 left-0 w-full h-1 bg-amber-500 transform -translate-y-1"></span>
             </span>
           </h2>
           
           {/* Main content */}
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-10 shadow-lg border border-amber-200 mb-8">
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-              At <span className="font-semibold text-amber-600">Maroko Ekspert</span>, we specialize in authentic, carefully curated Moroccan adventures. Whether you&apos;re dreaming of the vibrant souks of Marrakech, the golden dunes of the Sahara, or the cool breezes of the Atlas Mountains — we turn your travel dreams into reality.
+            <p>
+              {content.description}
             </p>
             
             {/* Polish language highlight */}
@@ -35,7 +47,7 @@ const AboutSection: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
               </svg>
               <span className="font-semibold">
-                Now, Polish-speaking travelers can enjoy our services in their native language!
+                {content.highlightText}
               </span>
             </div>
           </div>
