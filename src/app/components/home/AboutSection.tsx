@@ -38,10 +38,7 @@ const AboutSection: React.FC = () => {
           {/* Main content */}
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-8 md:p-10 shadow-lg border border-amber-200 mb-8">
             <p>
-              {content.description.replace(
-                content.companyName, 
-                `<strong>${content.companyName}</strong>`
-              )}
+              {content.description}
             </p>
             
             {/* Polish language highlight */}

@@ -11,23 +11,23 @@ const ContactPage = () => {
       {
         icon: <FaPhone className="text-2xl" />,
         title: "Call Us",
-        details: "+212 123 456 789",
+        details: "+48 725 648 880 | +212 669 035 305",
         description: "Available 9AM-6PM (GMT)",
-        link: "tel:+212123456789"
+        link: "tel:+48725648880"
       },
       {
         icon: <FaEnvelope className="text-2xl" />,
         title: "Email Us",
-        details: "contact@moroccoexperts.com",
+        details: "biuro@maroko-ekspert.pl",
         description: "Response within 24 hours",
-        link: "mailto:contact@moroccoexperts.com"
+        link: "mailto:biuro@maroko-ekspert.pl"
       },
       {
         icon: <FaMapMarkerAlt className="text-2xl" />,
         title: "Visit Us",
-        details: "123 Sahara Avenue, Marrakech",
+        details: "N°15, 4éme Etage, Imm. Inflass, Bd Abderrahim Bouabid,Agadir 80000",
         description: "Office hours: Mon-Fri 9-5",
-        link: "https://maps.google.com"
+        link: "https://maps.app.goo.gl/6HMYzEeTk8LsTTZy7"
       }
     ],
     

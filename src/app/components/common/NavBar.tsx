@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { GiDesert, GiMagicLamp } from "react-icons/gi";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 const navLinks = [
   { href: "/", label: "Home", icon: <FaHome className="mr-1" /> },
@@ -27,12 +28,9 @@ const navLinks = [
   { href: "/contact", label: "Contact", icon: <FaPhoneAlt className="mr-1" /> },
 ];
 
-const languages = [
-  { code: "pl", label: "Polski", flag: "🇵🇱" },
-  { code: "en", label: "English", flag: "🇬🇧" },
-];
-
 const Navbar: React.FC = () => {
+  const languageContext = useLanguage();
+  console.log(languageContext?.lang)
   const [isOpen, setIsOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
 
@@ -64,7 +62,7 @@ const Navbar: React.FC = () => {
               className="flex items-center hover:text-amber-300 transition-colors"
             >
               <FaGlobe className="mr-1" />
-              <span>EN</span>
+              <span className="uppercase">{languageContext?.lang || 'EN'}</span>
               <FaChevronDown
                 className={`ml-1 transition-transform ${
                   languageOpen ? "rotate-180" : ""
@@ -78,7 +76,9 @@ const Navbar: React.FC = () => {
                 languageOpen ? "block" : "hidden"
               }`}
             >
-              <LanguageSwitcher setLanguageOpen={setLanguageOpen} />
+              <div className="absolute right-0 mt-2 w-48 shadow-lg rounded-lg z-10">
+                <LanguageSwitcher setLanguageOpen={setLanguageOpen} />
+              </div>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
                 className="flex items-center w-full py-2 px-4 hover:bg-amber-800 rounded transition-colors"
               >
                 <FaGlobe className="mr-3" />
-                <span>Language (EN)</span>
+                <span className="uppercase">{languageContext?.lang}</span>
                 <FaChevronDown
                   className={`ml-auto transition-transform ${
                     languageOpen ? "rotate-180" : ""
@@ -141,16 +141,7 @@ const Navbar: React.FC = () => {
                   languageOpen ? "block" : "hidden"
                 }`}
               >
-                {languages.map(({ code, label, flag }) => (
-                  <a
-                    key={code}
-                    href="#"
-                    className="block py-2 px-4 hover:bg-amber-800 rounded transition-colors flex items-center"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <span className="mr-2">{flag}</span> {label}
-                  </a>
-                ))}
+                <LanguageSwitcher setLanguageOpen={setLanguageOpen} />
               </div>
             </div>
           </div>

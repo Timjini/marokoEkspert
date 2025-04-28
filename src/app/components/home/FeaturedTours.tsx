@@ -49,7 +49,7 @@ const FeaturedTours: React.FC = () => {
     cta: {
       text: "See All Tours",
       icon: FaArrowRight,
-      href: "#all-tours"
+      href: "tours"
     }
   };
 

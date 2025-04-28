@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { 
   FaMapMarkedAlt, 
@@ -101,10 +102,10 @@ const ServicesSection: React.FC = () => {
           <p className="text-lg text-blue-700 mb-6">
             {content.cta.prompt}
           </p>
-          <button className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transform transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 flex items-center justify-center mx-auto gap-2">
+          <Link href="/contact" className="w-72 cursor-pointer bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transform transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 flex items-center justify-center mx-auto gap-2">
             <content.cta.buttonIcon />
             <span>{content.cta.buttonText}</span>
-          </button>
+          </Link>
         </div>
       </div>
       

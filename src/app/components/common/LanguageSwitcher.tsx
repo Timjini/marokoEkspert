@@ -23,20 +23,20 @@ const LanguageSwitcher: React.FC<{ setLanguageOpen: React.Dispatch<React.SetStat
   };
 
   return (
-    <div className="absolute right-0 mt-2 w-48 shadow-lg rounded-lg z-10">
+      <>
       {languages.map(({ code, label, flag }) => (
         <a
           key={code}
           onClick={() => changeLanguage(code)}
           href="#"
-          className={`block px-4 py-2 text-amber-900 items-center hover:bg-amber-100 ${
-            code === lang ? 'bg-amber-200' : ''
+          className={`block px-4 py-2 items-center hover:bg-amber-500 ${
+            code === lang ? 'bg-amber-600' : ''
           }`}
         >
           <span className="mr-2">{flag}</span> {label}
         </a>
       ))}
-    </div>
+      </>
   );
 };
 

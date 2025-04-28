@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
     ],
     contactInfo: {
       phone: {
-        number: '+212 123 456 789',
+        number: '+48 725 648 880 | +212 669 035 305',
         details: '(Polish/English/Arabic)',
       },
-      email: 'contact@marokoekspert.com',
-      address: 'Rue de la Kasbah, Marrakech 40000, Morocco',
+      email: 'biuro@maroko-ekspert.pl',
+      address: 'N°15, 4éme Etage, Imm. Inflass, Bd Abderrahim Bouabid, Agadir 80000, Morocco',
     },
     newsletter: {
       description: 'Subscribe for exclusive Morocco travel tips and special offers.',
