@@ -7,32 +7,32 @@ export const TourGallery = () => {
   const galleryContent = {
     images: [
       {
-        src: "/desert-camp.jpg",
+        src: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=3873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Luxury desert camp",
-        description: "Experience our premium desert camps under the stars"
+        description: "Marvel at Marrakech’s iconic Koutoubia Mosque and gardens."
       },
       {
-        src: "/camel-trek.jpg",
+        src: "https://images.unsplash.com/photo-1719084198651-5ac167cb3e6e?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Camel trek at sunset",
-        description: "Sunset camel treks through golden dunes"
+        description: "Step back in time exploring Marrakech’s timeless monuments."
       },
       {
-        src: "/berber-village.jpg",
+        src: "https://images.unsplash.com/photo-1548018560-cd92fb00373f?q=80&w=3379&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Berber village visit",
-        description: "Authentic cultural encounters with Berber communities"
+        description: "Experience the true heart of Marrakech’s rich traditions."
       },
       {
-        src: "/atlas-mountains.jpg",
+        src: "https://images.unsplash.com/photo-1605882090044-aa9cbe6df29e?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Atlas Mountains landscape",
-        description: "Breathtaking views in the High Atlas Mountains"
+        description: "Wander vibrant souks and find unique Moroccan treasures."
       },
       {
-        src: "/moroccan-food.jpg",
+        src: "https://images.unsplash.com/photo-1579283135011-0974a412341a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         alt: "Traditional Moroccan cuisine",
-        description: "Savor authentic Moroccan flavors and cooking"
+        description: "Dive into the lively spirit of Jemaa el-Fnaa’s bustling square."
       }
     ],
-    autoPlayInterval: 5000, // 5 seconds
+    autoPlayInterval: 5000,
     controls: {
       prev: "Previous image",
       next: "Next image",
@@ -85,7 +85,7 @@ export const TourGallery = () => {
           alt={galleryContent.images[currentIndex].alt}
           className="h-full w-full object-cover"
         />
-        <div className="absolute bottom-16 left-0 right-0 text-center text-white bg-black bg-opacity-50 p-2">
+        <div className="absolute bottom-16 left-0 right-0 text-center text-white bg-yellow-600 bg-opacity-24 p-2">
           {galleryContent.images[currentIndex].description}
         </div>
       </div>
@@ -97,7 +97,7 @@ export const TourGallery = () => {
             key={index}
             onClick={() => goToSlide(index)}
             aria-label={`${galleryContent.controls.indicator} ${index + 1}`}
-            className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-blue-500" : "bg-gray-300"}`}
+            className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-yellow-500" : "bg-gray-300"}`}
           />
         ))}
       </div>
