@@ -14,9 +14,9 @@ const GuideCard = ({ name, expertise, languages, imgSrc }: {
       <Image 
         src={imgSrc} 
         alt={name} 
-        layout="fill" 
-        objectFit="cover" 
-        objectPosition="center" 
+        style={{ objectFit: 'cover' }}
+        height={600}
+        width={600}
       />
     </div>
     <div className="p-6">
@@ -49,19 +49,19 @@ export const MeetOurGuides: React.FC = () => {
         name: "Name Here",
         expertise: "Sahara Desert Specialist",
         languages: ["Polish", "English", "Arabic", "French"],
-        imgSrc: "/guides/karim.jpg"
+        imgSrc: "/images/user.png"
       },
       {
         name: "Name Here",
         expertise: "Marrakech Cultural Guide",
         languages: ["Polish", "English", "Arabic"],
-        imgSrc: "/guides/amina.jpg"
+        imgSrc: "/images/user.png"
       },
       {
         name: "Name Here",
         expertise: "Atlas Mountain Trekker",
         languages: ["Polish", "English", "Berber"],
-        imgSrc: "/guides/youssef.jpg"
+        imgSrc: "/images/user.png"
       }
     ],
     footer: {

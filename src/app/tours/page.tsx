@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { 
   FaFilter, 
@@ -12,87 +13,9 @@ import {
   FaChevronRight,
   FaTimes
 } from 'react-icons/fa';
+import { allTours } from '../utils/data';
 
 const Tours: React.FC = () => {
-  // Sample tour data
-  const allTours = [
-    {
-      id: 1,
-      title: "Sunset Camel Ride in Marrakech",
-      category: "Activity",
-      location: "Marrakech",
-      duration: "2 hours",
-      price: 75,
-      description: "Experience a magical sunset over the palm groves with traditional Berber tea.",
-      language: ["Polish", "English"],
-      type: "Group",
-      thumbnail: "https://plus.unsplash.com/premium_photo-1661936495413-875706d59696?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bestseller: true
-    },
-    {
-      id: 2,
-      title: "Discover Marrakech: Full-Day Guided City Tour",
-      category: "Tour",
-      location: "Marrakech",
-      duration: "Full day",
-      price: 80,
-      description: "Explore Marrakech's vibrant souks, palaces, gardens, and historic medina in one day!",
-      language: ["Polish", "English", "French"],
-      type: "Private",
-      thumbnail: "https://images.unsplash.com/photo-1618423205267-e95744f57edf?q=80&w=3008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 3,
-      title: "Flavors of Marrakech: A Guided Culinary Journey",
-      category: "Activity",
-      location: "Marrakech",
-      duration: "2 hours",
-      price: 75,
-      description: "Taste Marrakech’s authentic flavors on a guided tour through markets and kitchens!",
-      language: ["Polish", "French"],
-      type: "Group",
-      thumbnail: "https://images.unsplash.com/photo-1643019237176-8ae0859f1123?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bestseller: true
-    },
-    {
-      id: 4,
-      title: "4x4 Off-Road through the High Atlas",
-      category: "Tour",
-      location: "Marrakech",
-      duration: "3 hours",
-      price: 75,
-      description: "Experience rugged trails and breathtaking High Atlas views on a thrilling 4x4 ride!",
-      language: ["Polish", "English"],
-      type: "Group",
-      thumbnail: "https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 5,
-      title: "Ait Ben Haddou & Ouarzazate: Full-Day Desert Adventure",
-      category: "Activity",
-      location: "Marrakech",
-      duration: "Full day",
-      price: 55,
-      description: "Journey through ancient kasbahs and desert landscapes on a full-day guided trip!",
-      language: ["English", "Polish"],
-      type: "Group",
-      thumbnail: "https://images.unsplash.com/photo-1548105155-b8c1b5142252?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      id: 6,
-      title: "Paradise Valley & Immouzzer: Nature Escape Day Trip",
-      category: "Activity",
-      location: "Agadir",
-      duration: "Full day",
-      price: 45,
-      description: "Swim in natural pools and hike through lush valleys on this refreshing day tour!",
-      language: ["Polish", "English"],
-      type: "Private",
-      thumbnail: "https://images.unsplash.com/photo-1577968680674-d967769be12c?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bestseller: true
-    }
-  ];
-
   // State for filters
   const [filters, setFilters] = useState({
     locations: [] as string[],
@@ -183,7 +106,7 @@ const Tours: React.FC = () => {
   return (
     <div className="bg-amber-50 min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-[url('/morocco-hero.jpg')] bg-cover bg-center">
+      <div className="relative h-64 md:h-80 bg-[url(https://images.unsplash.com/photo-1559586616-361e18714958?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center">
         <div className="absolute inset-0 bg-gradient-to-t from-amber-900/70 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-end pb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">Explore Morocco: Tours, Activities, and Events</h1>
@@ -399,9 +322,9 @@ const Tours: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                        <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center transition-colors cursor-pointer">
+                        <Link href={`/tours/${tour.id}`} className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center transition-colors cursor-pointer">
                           View Details <FaChevronRight className="ml-1" />
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

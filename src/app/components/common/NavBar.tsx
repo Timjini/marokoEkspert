@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center justify-between py-4">
           <div className="flex items-center space-x-2">
             {/* <GiMagicLamp className="text-2xl text-amber-300" /> */}
-            <span className="text-xl font-bold">Maroko Ekspert</span>
+            <Link href='/' className="text-xl font-bold">Maroko Ekspert</Link>
           </div>
 
           <div className="flex space-x-6">
@@ -86,8 +86,8 @@ const Navbar: React.FC = () => {
         {/* Mobile Nav */}
         <div className="md:hidden flex items-center justify-between py-4">
           <div className="flex items-center space-x-2">
-            <GiMagicLamp className="text-2xl text-amber-300" />
-            <span className="text-xl font-bold">Maroko Ekspert</span>
+            {/* <GiMagicLamp className="text-2xl text-amber-300" /> */}
+            <Link href='/' className="text-xl font-bold">Maroko Ekspert</Link>
           </div>
 
           <button
