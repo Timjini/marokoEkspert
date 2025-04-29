@@ -11,7 +11,7 @@ import {
 
 const HeroSection: React.FC = () => {
   const content = {
-    backgroundImage: '/morocco-hero.jpg',
+    backgroundImage: '',
     decorativeIcons: [
       { icon: GiSpotedFlower, className: "text-amber-300 text-3xl" },
       { icon: GiDesert, className: "text-amber-400 text-4xl" },
@@ -38,10 +38,9 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-      {/* Background image with overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${content.backgroundImage})` }}
+        // style={{ backgroundImage: `url(${content.backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-amber-700/70 to-amber-600/30"></div>
       </div>

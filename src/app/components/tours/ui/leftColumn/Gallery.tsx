@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -80,10 +81,12 @@ export const TourGallery = () => {
     <div className="relative h-96 w-full">
       {/* Current image display */}
       <div className="h-full w-full">
-        <img 
+        <Image 
           src={galleryContent.images[currentIndex].src} 
           alt={galleryContent.images[currentIndex].alt}
           className="h-full w-full object-cover"
+          height={800}
+          width={800}
         />
         <div className="absolute bottom-16 left-0 right-0 text-center text-white bg-yellow-600 bg-opacity-24 p-2">
           {galleryContent.images[currentIndex].description}
