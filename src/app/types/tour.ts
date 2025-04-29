@@ -10,6 +10,8 @@ export type Tour = {
       description: string;
       coverImg: string;
       gallery: string[];
+      languages: string[];
+      tags: string[];
     };
     itinerary: {
       step: number;

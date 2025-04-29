@@ -2,6 +2,7 @@ import React from "react";
 import { FaCalendarAlt, FaLandmark, FaMapMarkerAlt, FaMosque } from "react-icons/fa";
 import { GiShoppingBag, GiTempleGate } from "react-icons/gi";
 
+
 export const allTours = [
     {
       id: 1,
@@ -14,7 +15,8 @@ export const allTours = [
       language: ["Polish", "English"],
       type: "Group",
       thumbnail: "https://plus.unsplash.com/premium_photo-1661936495413-875706d59696?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bestseller: true
+      bestseller: true,
+      tags:['bestseller']
     },
     {
       id: 2,
@@ -101,7 +103,9 @@ export const tourDetails = {
       type: "Group",
       coverImg: "https://images.unsplash.com/photo-1618423205267-e95744f57edf?q=80&w=3008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       gallery: ["image1.png", "image2.png", "image3.png"],
-      bestseller: true
+      bestseller: true,
+      languages: ["Polish", "English"],
+      tags:['bestseller']
     },
     itinerary: [
       {

@@ -285,10 +285,10 @@ const Tours: React.FC = () => {
                         width={3870}
                         height={2500}
                       />
-                      {tour.bestseller && (
+                      {tour.tags && (
                         <div className="absolute top-2 left-2 bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded">
                           <FaStar className="inline mr-1" />
-                          Bestseller
+                         <span className='capitalize'>{tour.tags[0]}</span> 
                         </div>
                       )}
                     </div>
